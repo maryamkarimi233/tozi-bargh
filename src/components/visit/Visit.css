@@ -1,0 +1,87 @@
+.select-container {
+    display: flex;
+    justify-content: center;
+    /* margin: 20px 0; */
+  }
+  
+  .nav-select {
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #959899;
+    color: #302e2e;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    -webkit-appearance: none;
+    /*ForSafari*/-moz-appearance: none;
+    /*ForFirefox*/appearance: none;
+    /*Standardsyntax*/position: relative;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    -webkit-transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    -moz-transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    -ms-transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    -o-transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+  
+  .nav-select:hover {
+    background-color: #ffc107;
+    color: #1e1e2f;
+    transform: translateY(-5px);
+  }
+  
+  .nav-select option {
+    background-color: #1e1e2f;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+  }
+  
+  .nav-select option:hover {
+    background-color: #ffc107;
+    color: #1e1e2f;
+    cursor: pointer;
+  }
+  
+  .nav-select option:checked {
+    background-color: #ffc107;
+    color: #1e1e2f;
+  }
+  
+  .nav-select::after {
+    content: '▼';
+    font-size: 1.2rem;
+    color: #fff;
+    position: absolute;
+    right: 15px;
+    top: calc(50% - 0.6em);
+    pointer-events: none;
+  }
+  
+  .select-container select:focus,
+  .select-container select:focus-visible {
+    outline: none;
+    border-color: #ffc107;
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+  }
+  
+  @keyframes dropdownFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .nav-select option {
+    animation: dropdownFadeIn 0.3s ease;
+  }
+  

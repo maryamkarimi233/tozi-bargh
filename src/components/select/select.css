@@ -1,0 +1,15 @@
+.select-input {
+    padding: 5px;
+    font-size: 16px;
+     border: 2px solid #333; 
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin-bottom: 15px;
+    width: 80px;
+  }
+  
+   .select-input:focus {
+    border-color: #272627;
+  } 
+  

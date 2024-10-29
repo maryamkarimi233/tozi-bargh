@@ -17,7 +17,7 @@ const Login = () => {
     e.preventDefault();
     const user = users.find(u => u.username === username && u.password === password);
     if (user) {
-      navigate('/sing');
+      navigate('/sign');
     } else {
       alert('نام کاربری یا کلمه عبور اشتباه است');
     }
